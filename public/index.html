@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Out Adventure</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta descripttion="Outdoor Adventure is a concept template built by Elliot Richardson for project purpose to demonstrate his Front End Development skills">
+        <link href="./css/reset.css" type="text/css" rel="stylesheet">
+
+        <!-- GOOGLE FONTS AND FONT AWESOME FONTS -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body ng-controller="mainCtrl">
+
+        <!-- MOBILE HEADER MENU 700PX LESS THAN -->
+        <header class="mobile-menu">
+            <div>
+                <svg class="hamburger" width="100%" height="100%" viewBox="0 0 44 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                    <g transform="matrix(1,0,0,1,-1399,-251)">
+                        <g id="Menu--wide-" transform="matrix(1,1.2326e-32,1.2326e-32,1,-322,-759)">
+                            <g transform="matrix(1,0,0,1,151.3,-321)">
+                                <rect x="1569.7" y="1351" width="44" height="3" style="fill:white;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,151.3,-320)">
+                                <rect x="1569.7" y="1340" width="44" height="3" style="fill:white;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,151.3,-319)">
+                                <rect x="1569.7" y="1329" width="44" height="3" style="fill:white;"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="logo-container">
+                <svg class="logo" width="100%" height="100%" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,-535.241,-14.2407)">
+                        <g transform="matrix(1,0,0,2.0834,0,0)">
+                            <g transform="matrix(0.700913,0,0,0.336427,452.393,5.59956)">
+                                <g transform="matrix(1.42671,-0,-0,1.42671,118.199,3.67321)">
+                                    <use xlink:href="#_Image1" x="0" y="0" width="43.519px" height="43.519px" transform="matrix(0.989058,0,0,0.989058,0,0)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <defs>
+                        <image id="_Image1" width="44px" height="44px" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+                <h1>Future</h1>
+            </div>
+        </header>
+
+        <!-- DESKTOP HEADER MENU 700PX GREATER -->
+        <header class="inner-wrap">
+            <div>
+                <a class="sign-in" href=""><p>Sign Up</p></a>
+            </div>
+            <div class="logo-container">
+                <svg class="logo" width="100%" height="100%" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,-535.241,-14.2407)">
+                        <g transform="matrix(1,0,0,2.0834,0,0)">
+                            <g transform="matrix(0.700913,0,0,0.336427,452.393,5.59956)">
+                                <g transform="matrix(1.42671,-0,-0,1.42671,118.199,3.67321)">
+                                    <use xlink:href="#_Image1" x="0" y="0" width="43.519px" height="43.519px" transform="matrix(0.989058,0,0,0.989058,0,0)"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <defs>
+                        <image id="_Image1" width="44px" height="44px" xlink:href="data:image/png;base64,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"/>
+                    </defs>
+                </svg>
+                <h1>Future</h1>
+            </div>
+            <nav>
+                <a href="#"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a href="contact.html"><li>Contact</li></a>
+                <a href=""><li>Book</li></a>
+                <svg class="tree-icon" width="100%" height="100%" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,-1178.5,-29.5)">
+                        <g transform="matrix(1,0,0,2.0834,0,0)">
+                            <g id="tree-logo">
+                                <g transform="matrix(0.695652,0,0,0.333902,355.348,4.38247)">
+                                    <path d="M1193,30L1202,48L1184,48L1193,30Z" style="fill:none;stroke:rgb(13,202,242);stroke-width:1.44px;"/>
+                                </g>
+                                <g transform="matrix(0.588629,0,0,0.282533,478.05,9.82765)">
+                                    <path d="M1211.5,28L1218,41L1205,41L1211.5,28Z" style="fill:none;stroke:white;stroke-width:1.7px;"/>
+                                </g>
+                                <g transform="matrix(0.695652,0,0,0.333902,351.87,7.72149)">
+                                    <path d="M1206.47,41L1206.47,45" style="fill:none;stroke:white;stroke-width:1.44px;"/>
+                                </g>
+                                <g transform="matrix(0.695652,0,0,0.333902,355.348,4.38247)">
+                                    <path d="M1193,48L1193,53" style="fill:none;stroke:rgb(13,202,242);stroke-width:1.44px;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+            </nav>
+        </header>
+
+    <!-- UI ANGULAR VIEW -->
+    <div ui-view></div ui-view>
+
+    <!-- CONTACT WITH US -->
+    <div class="social-container inner-wrap">
+        <p>Connect With Us</p>
+        <div class="social-box">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-pinterest-p"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+        <footer class="inner-wrap">
+            <div class="left-box">
+                <nav >
+                    <h4>Site Map</h4>
+                    <a href="#"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                    <a href="#"><li>Shop</li></a>
+                </nav>
+                <nav >
+                    <h4>Explore</h4>
+                    <a href=""><li>News</li></a>
+                    <a href=""><li>Adventures</li></a>
+                    <a href=""><li>Info</li></a>
+                    <a href=""><li>Gift Cards</li></a>
+                </nav>
+                <nav >
+                    <h4>Future</h4>
+                    <a href=""><li>FAQ</li></a>
+                    <a href=""><li>Responsibility</li></a>
+                    <a href=""><li>Careers</li></a>
+                    <a href=""><li>Company</li></a>
+                </nav>
+                <nav >
+                    <h4>Support</h4>
+                    <a href=""><li>Forums</li></a>
+                    <a href=""><li>Groups</li></a>
+                    <a href=""><li>Contact</li></a>
+                    <a href=""><li>Travelers</li></a>
+                </nav>
+            </div>
+            <div class="right-box">
+                <p>News</p>
+                <input type="text" placeholder="Sign Up For News"/>
+                <svg class="email-icon" width="100%" height="100%" viewBox="0 0 38 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                    <g transform="matrix(1,0,0,1,-1134,-1710)">
+                        <g transform="matrix(1,0,0,2.0834,-1.13687e-13,-7)">
+                            <g id="Mail" transform="matrix(0.95,1.68614e-32,1.17097e-32,0.455986,602.665,649.263)">
+                                <path d="M559.3,383.5L559.3,409.5L599.3,409.5L599.3,383.5L559.3,383.5ZM582.7,399.4C581.8,400.3 580.6,400.8 579.3,400.8C578,400.8 576.8,400.3 575.9,399.4L562,385.5L596.5,385.5L582.7,399.4ZM571.6,396.5L561.3,406.8L561.3,386.2L571.6,396.5ZM572.3,397.2L575.2,400.1C576.3,401.2 577.8,401.8 579.3,401.8C580.9,401.8 582.3,401.2 583.4,400.1L586.3,397.2L596.6,407.5L562,407.5L572.3,397.2ZM587,396.5L597.3,386.2L597.3,406.9L587,396.5Z" style="fill:rgb(191,191,191);fill-rule:nonzero;"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <p>Adventures</p>
+                <input type="text" placeholder="Find An Adventure"/>
+                <svg class="location-icon" width="100%" height="100%" viewBox="0 0 31 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,-1139.51,-1806.49)">
+                        <g transform="matrix(1,0,0,2.0834,0,18)">
+                            <g id="location">
+                                <g transform="matrix(-0.681818,-0.000124821,0.000260053,-0.327262,1763.37,1486.82)">
+                                    <path d="M893,1875C893,1875 899.303,1887.61 905.162,1899.32C907.269,1903.54 907.044,1908.54 904.567,1912.55C902.089,1916.56 897.713,1919 893.001,1919C893,1919 893,1919 892.999,1919C888.287,1919 883.911,1916.56 881.433,1912.55C878.956,1908.54 878.731,1903.54 880.838,1899.32C886.697,1887.61 893,1875 893,1875Z" style="fill:rgb(230,230,230);stroke:rgb(191,191,191);stroke-width:1.47px;"/>
+                                </g>
+                                <g transform="matrix(0.757576,0,0,0.363625,477.351,175.549)">
+                                    <circle cx="894.5" cy="1889.5" r="4.5" style="fill:white;stroke:rgb(191,191,191);stroke-width:1.32px;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+        </footer>
+        <div class="bottom-info inner-wrap">
+            <div class="design">
+                <p>Design: Elliot Richardson
+            </div>
+            <div class="middle">
+                <p>FakeFuture.com | </p>
+                <p class="middle-color"> All Rights Reserved &copy;2016 | </p>
+                <p> Privacy Policy</p>
+            </div>
+            <div class="right">
+                <svg width="100%" height="100%" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                    <g transform="matrix(1,0,0,1,-1164,-1924)">
+                        <g transform="matrix(1,0,0,2.0834,0,0)">
+                            <g id="Back-To-Top" transform="matrix(0.642857,0,0,0.642857,441.143,339.864)">
+                                <g transform="matrix(0.972222,0,0,0.466652,31.2778,26.1725)">
+                                    <circle cx="1162" cy="1927" r="36" style="fill:none;stroke:white;stroke-width:3.2px;"/>
+                                </g>
+                                <g id="Arrow-Up-Icon" transform="matrix(1,0,0,0.479985,965.003,-648.46)">
+                                    <path d="M203.397,3283.54L195.492,3275.63L187.588,3283.54C186.995,3284.14 186.034,3284.14 185.442,3283.54C184.849,3282.95 184.849,3281.99 185.442,3281.39L194.388,3272.44C194.692,3272.14 195.093,3271.99 195.492,3272C195.891,3271.99 196.292,3272.14 196.597,3272.44L205.543,3281.39C206.135,3281.99 206.135,3282.95 205.543,3283.54C204.95,3284.14 203.989,3284.14 203.397,3283.54Z" style="fill:white;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+
+    </main> <!-- closing main tag -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="./js/controllers/mainCtrl.js"></script>
+    <script src="./js/directives/contactUsComponent.js"></script>
+    </body>
+</html>
