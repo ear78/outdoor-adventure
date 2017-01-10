@@ -114,24 +114,30 @@ a:hover {
 /////////////////////////////////*/
 
 .mobile-menu {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    .logo-container {
+        justify-content: flex-end;
+    }
 }
 
 header .hamburger {
     width: 24px;
 }
 
+
 /*/////////////////////////////////
 //// HEADER
 /////////////////////////////////*/
 
 header {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 header div {
@@ -198,6 +204,7 @@ footer {
     display: flex;
     padding-top: 40px;
     padding-bottom: 40px;
+    flex-direction: column-reverse;
 }
 
 footer .left-box {
@@ -230,7 +237,6 @@ footer .left-box h4 {
 }
 
 footer .right-box {
-    // width: 40%;
     position: relative;
     margin: 0 auto 25px;
     width: 70%;
@@ -290,9 +296,16 @@ footer .logo-container {
     }
 }
 
-
 footer .right-box input {
     width: 100%;
+}
+
+footer .left-box {
+    justify-content: center;
+    padding-left: 0%;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
 }
 
 /*/////////////////////////////////
@@ -305,13 +318,14 @@ footer .right-box input {
     width: 100%;
     padding: 20px 0px;
     align-items: center;
+    border-top: none;
 }
 
 .bottom-info .middle {
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    padding-right: 35px;
+    justify-content: flex-start;
+    width: 61%;
+    padding-right: 0px;
 }
 
 .bottom-info p {
@@ -342,85 +356,16 @@ footer .right-box input {
     width: 32px;
 }
 
-/*////////////////////////////////*/
-/*/////////////////////////////////
-//// ABOUT PAGE
-/////////////////////////////////*/
-
-// .about .info {
-//     display: flex;
-// }
-//
-// .about .info .left-box,
-// .about .info .right-box {
-//     width: 50%;
-// }
-//
-// .about .info .right-box h2,
-// .about .info .right-box p {
-//     width: 85%;
-//     margin: 20px 9%;
-//     line-height: 1.2;
-// }
-// .about .info button {
-//     display: block;
-//     margin: 35px 9%;
-// }
-//
-// .about .right-box svg {
-//     width: 145px;
-//     height: auto;
-//     margin: 0px auto;
-//     display: block;
-// }
-//
-// .about .info img {
-//     max-width: 100%;
-// }
-
-
+.bottom-info .design {
+    display: none;
+}
 
 
 /*/////////////////////////////////
 //// MEDIA QUERIES
 /////////////////////////////////*/
 
-@media(min-width: 768px){
-    footer .right-box input {
-        width: 92%;
-    }
-
-    footer .email-icon,
-    footer .location-icon {
-        right: 12%;
-    }
-
-}
-
-@media (max-width: 900px) {
-
-    .bottom-info .middle {
-        width: 61%;
-        padding-right: 0px;
-    }
-}
-@media (max-width: 700px) {
-    .mobile-menu {
-        display: flex;
-    }
-
-    header .logo-container {
-        justify-content: flex-end;
-    }
-
-    header {
-        display: none;
-    }
-
-    .hero-container {
-        display: none;
-    }
-
+@media(min-width: 490px){
     footer {
         flex-direction: column-reverse;
     }
@@ -432,21 +377,80 @@ footer .right-box input {
         text-align: center;
         width: 90%;
     }
+}
+
+@media(min-width: 700px){
+    footer {
+        align-items: center;
+    }
+}
+
+@media(min-width: 768px){
+
+    footer .right-box input {
+        width: 92%;
+    }
+
+    footer .email-icon,
+    footer .location-icon {
+        right: 12%;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    .bottom-info .middle {
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .bottom-info .design {
+        display: block;
+    }
+}
+
+@media(min-width:992px){
+    .mobile-menu {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header {
+        display: flex;
+    }
+
+    footer {
+        border-top: none;
+    }
+
+    footer .left-box {
+        justify-content: flex-start;
+    }
+
+    .bottom-info {
+        border-top: 1px solid;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .hero-container {
+        display: none;
+    }
 
     .bottom-info .middle {
         justify-content: flex-start;
         width: 100%;
     }
 
-    .bottom-info .design {
-        display: none;
-    }
+
 }
 
 @media (max-width: 490px) {
-    // .logo-container svg {
-    //     width: 26px;
-    // }
 
     header .logo-container h1 {
         font-size: 1em;
