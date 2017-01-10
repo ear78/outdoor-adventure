@@ -1,0 +1,229 @@
+
+
+/*/////////////////////////////////
+//// HERO PIC SECTION
+/////////////////////////////////*/
+
+.column-padding {
+    padding: 0 5px;
+}
+
+.hero-container {
+    display: none;
+    padding: 0 0 40px;
+}
+
+.hero-pic-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-pic-section img {
+    max-width: 100%;
+    margin-bottom: 7px;
+    transition: all .1s ease;
+}
+
+.hero-pic-section img:hover {
+    opacity: .5;
+}
+
+.pic-column h2 {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+/*/////////////////////////////////
+//// MOBILE HERO PIC
+/////////////////////////////////*/
+
+.mobile-hero-pic {
+    display: block;
+    margin: 0 auto 10px;
+    width: 95%;
+}
+
+.mobile-hero-pic img {
+    max-width: 560px;
+    max-width: 100%;
+}
+
+/*/////////////////////////////////
+//// LETS GO SOMEWHERE
+/////////////////////////////////*/
+
+.go-somewhere-title {
+    display: flex;
+}
+
+.go-somewhere-container,
+.go-somewhere-pic-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.go-somewhere-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.go-somewhere-container svg {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.go-somewhere-title {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 65px;
+    align-items: center;
+}
+
+.go-somewhere-title h2 {
+    order: 2;
+    font-weight: 300;
+    // font-size: 2.5em;
+    font-size: 1.5em;
+}
+
+.go-somewhere-pic-container .left,
+.go-somewhere-pic-container .right {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.go-somewhere-pic-container .left p {
+    display: none;
+    padding: 20px 40px 20px 20px;
+    font-size: 1.125em;
+    line-height: 1.1;
+    position: absolute;
+    top: 17%;
+}
+
+.go-somewhere-pic-container h2 {
+    font-weight: 600;
+}
+
+.go-somewhere-pic-container .left h2 {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.go-somewhere-pic-container .btn-container {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 110px;
+    text-align: center;
+}
+
+
+/*////////////////////////////////////*/
+
+.go-somewhere-pic-container .right h2 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+
+.go-somewhere-pic-container .right p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 0 5%;
+    bottom: 10px;
+}
+
+.go-somewhere-pic-container .playbutton-container {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    text-align: center;
+}
+
+.go-somewhere-pic-container .playbutton {
+    width: 75px;
+}
+
+.go-somewhere-pic-container img {
+    width: 540px;
+    max-width: 100%;
+}
+
+
+@media(min-width: 600px) {
+    .go-somewhere-pic-container .left p {
+        display: block;
+        top: 95px;
+    }
+
+    .go-somewhere-pic-container .btn-container {
+        top: 245px;
+        left: 20px;
+        text-align: left;
+    }
+
+    .go-somewhere-pic-container .left h2 {
+        left: 20px;
+        text-decoration: none;
+        font-size: 1.75em;
+        text-align: left;
+    }
+
+    .go-somewhere-pic-container .right h2 {
+        text-decoration: none;
+        font-size: 1.75em;
+        top: 50px;
+    }
+
+    .go-somewhere-pic-container .playbutton-container {
+        top: 110px;
+        img {
+            width: 80px;
+        }
+    }
+
+    .go-somewhere-pic-container .right p {
+        bottom: 35px;
+    }
+}
+
+@media(min-width: 767px) {
+    .mobile-hero-pic {
+        display: none;
+    }
+
+    .hero-container {
+        display: flex;
+    }
+}
+
+@media (max-width: 700px) {
+    .mobile-menu {
+        display: flex;
+    }
+
+
+
+    .hero-container {
+        display: none;
+    }
+}

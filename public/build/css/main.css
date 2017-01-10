@@ -126,13 +126,14 @@ a:hover {
   margin: 0 auto; }
 
 .standard-button {
-  background: none;
-  border: 1px solid #fff;
+  background: white;
+  border: 2px solid #fff;
   border-radius: 2px;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 1.125em;
-  font-weight: 300; }
+  color: black;
+  padding: 13px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase; }
 
 /*/////////////////////////////////
 //// HEADER MOBILE
@@ -170,11 +171,11 @@ header .sign-in:hover {
   color: #0DCAF2; }
 
 header .logo {
-  width: 37px;
+  width: 26px;
   transition: all .1s ease; }
 
 header .logo-container h1 {
-  font-size: 1.75em;
+  font-size: 1.25em;
   transition: all .1s ease; }
 
 header nav {
@@ -196,135 +197,14 @@ header .tree-icon {
   width: 12px; }
 
 /*/////////////////////////////////
-//// HERO PIC SECTION
-/////////////////////////////////*/
-.column-padding {
-  padding: 0 5px; }
-
-.hero-container {
-  display: flex;
-  padding: 0 0 40px; }
-
-.hero-pic-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%; }
-
-.hero-pic-section img {
-  max-width: 100%;
-  margin-bottom: 7px;
-  transition: all .1s ease; }
-
-.hero-pic-section img:hover {
-  opacity: .5; }
-
-.pic-column h2 {
-  padding-left: 5px;
-  padding-top: 5px; }
-
-/*/////////////////////////////////
-//// MOBILE HERO PIC
-/////////////////////////////////*/
-.mobile-hero-pic {
-  display: none; }
-
-/*/////////////////////////////////
-//// SOCIAL BANNER
-/////////////////////////////////*/
-.social-container {
-  background-color: none;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  font-variant: small-caps; }
-
-.social-box i {
-  margin-right: 5px; }
-
-/*/////////////////////////////////
-//// LETS GO SOMEWHERE
-/////////////////////////////////*/
-.go-somewhere-container,
-.go-somewhere-pic-container,
-.go-somewhere-title {
-  display: flex; }
-
-.go-somewhere-container {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 70px; }
-
-.go-somewhere-container svg {
-  width: 50px; }
-
-.go-somewhere-title {
-  padding: 70px 0;
-  align-items: center; }
-
-.go-somewhere-title h2 {
-  margin-right: 10px;
-  font-weight: 300;
-  font-size: 2.5em; }
-
-.go-somewhere-pic-container .left,
-.go-somewhere-pic-container .right {
-  position: relative;
-  width: 100%; }
-
-.go-somewhere-pic-container div {
-  margin: 0 1%; }
-
-.go-somewhere-pic-container .left p {
-  padding: 20px 40px 20px 20px;
-  font-size: 1.125em;
-  line-height: 1.1;
-  position: absolute;
-  top: 17%; }
-
-.go-somewhere-pic-container .left h2 {
-  padding: 35px 0 0 20px;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.go-somewhere-pic-container button {
-  position: absolute;
-  bottom: 12%;
-  left: 20px; }
-
-/*////////////////////////////////////*/
-.go-somewhere-pic-container .right h2 {
-  position: absolute;
-  top: 35px;
-  left: 25%; }
-
-.go-somewhere-pic-container .right p {
-  position: absolute;
-  bottom: 9%;
-  left: 20px;
-  text-align: center;
-  padding-right: 4%; }
-
-.go-somewhere-pic-container .playbutton {
-  position: absolute;
-  top: 30%;
-  left: 42%;
-  width: 80px; }
-
-.go-somewhere-pic-container img {
-  width: 540px;
-  max-width: 100%; }
-
-/*/////////////////////////////////
 //// FOOTER
 /////////////////////////////////*/
 footer {
   border-top: 1px solid #fff;
   width: 100%;
   display: flex;
-  padding-top: 70px;
-  margin-bottom: 40px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 footer .left-box {
   display: flex;
@@ -350,15 +230,23 @@ footer .left-box h4 {
   font-size: 1.125em; }
 
 footer .right-box {
-  width: 40%;
   position: relative;
+  margin: 0 auto 25px;
+  width: 70%;
   transition: all  .1s ease; }
+  footer .right-box h2 {
+    font-size: 1.25em;
+    text-align: center;
+    margin-bottom: 20px; }
+    footer .right-box h2 svg {
+      width: 24px;
+      vertical-align: text-bottom; }
 
 footer .right-box input {
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 2px;
-  width: 80%;
+  width: 100%;
   margin-bottom: 15px;
   text-transform: uppercase;
   font-weight: 300;
@@ -371,15 +259,27 @@ footer .email-icon {
   width: 23px;
   height: 30px;
   position: absolute;
-  top: 23px;
-  right: 19%; }
+  top: 70px;
+  right: 5%; }
 
 footer .location-icon {
   width: 22px;
   height: 30px;
   position: absolute;
   bottom: 18px;
-  right: 19%; }
+  right: 5%; }
+
+footer .logo-container {
+  text-align: center;
+  margin: 40px 0; }
+  footer .logo-container svg {
+    width: 50px; }
+  footer .logo-container p {
+    font-size: 1.75em;
+    font-variant: small-caps; }
+
+footer .right-box input {
+  width: 100%; }
 
 /*/////////////////////////////////
 //// BOTTOM INFO
@@ -423,6 +323,231 @@ footer .location-icon {
 /*/////////////////////////////////
 //// ABOUT PAGE
 /////////////////////////////////*/
+/*/////////////////////////////////
+//// MEDIA QUERIES
+/////////////////////////////////*/
+@media (min-width: 768px) {
+  footer .right-box input {
+    width: 92%; }
+  footer .email-icon,
+  footer .location-icon {
+    right: 12%; } }
+
+@media (max-width: 900px) {
+  .bottom-info .middle {
+    width: 61%;
+    padding-right: 0px; } }
+
+@media (max-width: 700px) {
+  .mobile-menu {
+    display: flex; }
+  header .logo-container {
+    justify-content: flex-end; }
+  header {
+    display: none; }
+  .hero-container {
+    display: none; }
+  footer {
+    flex-direction: column-reverse; }
+  footer .left-box {
+    justify-content: center;
+    padding-left: 0%;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%; }
+  .bottom-info .middle {
+    justify-content: flex-start;
+    width: 100%; }
+  .bottom-info .design {
+    display: none; } }
+
+@media (max-width: 490px) {
+  header .logo-container h1 {
+    font-size: 1em; }
+  .left-box nav:nth-child(2),
+  .left-box nav:nth-child(3),
+  .left-box nav:nth-child(4) {
+    display: none; }
+  .bottom-info .middle {
+    flex-direction: column; } }
+
+/*/////////////////////////////////
+//// HERO PIC SECTION
+/////////////////////////////////*/
+.column-padding {
+  padding: 0 5px; }
+
+.hero-container {
+  display: none;
+  padding: 0 0 40px; }
+
+.hero-pic-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.hero-pic-section img {
+  max-width: 100%;
+  margin-bottom: 7px;
+  transition: all .1s ease; }
+
+.hero-pic-section img:hover {
+  opacity: .5; }
+
+.pic-column h2 {
+  padding-left: 5px;
+  padding-top: 5px; }
+
+/*/////////////////////////////////
+//// MOBILE HERO PIC
+/////////////////////////////////*/
+.mobile-hero-pic {
+  display: block;
+  margin: 0 auto 10px;
+  width: 95%; }
+
+.mobile-hero-pic img {
+  max-width: 560px;
+  max-width: 100%; }
+
+/*/////////////////////////////////
+//// LETS GO SOMEWHERE
+/////////////////////////////////*/
+.go-somewhere-title {
+  display: flex; }
+
+.go-somewhere-container,
+.go-somewhere-pic-container {
+  display: flex;
+  flex-direction: column; }
+
+.go-somewhere-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.go-somewhere-container svg {
+  width: 80px;
+  margin-bottom: 10px; }
+
+.go-somewhere-title {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 65px;
+  align-items: center; }
+
+.go-somewhere-title h2 {
+  order: 2;
+  font-weight: 300;
+  font-size: 1.5em; }
+
+.go-somewhere-pic-container .left,
+.go-somewhere-pic-container .right {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.go-somewhere-pic-container .left p {
+  display: none;
+  padding: 20px 40px 20px 20px;
+  font-size: 1.125em;
+  line-height: 1.1;
+  position: absolute;
+  top: 17%; }
+
+.go-somewhere-pic-container h2 {
+  font-weight: 600; }
+
+.go-somewhere-pic-container .left h2 {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em; }
+
+.go-somewhere-pic-container .btn-container {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 110px;
+  text-align: center; }
+
+/*////////////////////////////////////*/
+.go-somewhere-pic-container .right h2 {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5em; }
+
+.go-somewhere-pic-container .right p {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0 5%;
+  bottom: 10px; }
+
+.go-somewhere-pic-container .playbutton-container {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  text-align: center; }
+
+.go-somewhere-pic-container .playbutton {
+  width: 75px; }
+
+.go-somewhere-pic-container img {
+  width: 540px;
+  max-width: 100%; }
+
+@media (min-width: 600px) {
+  .go-somewhere-pic-container .left p {
+    display: block;
+    top: 95px; }
+  .go-somewhere-pic-container .btn-container {
+    top: 245px;
+    left: 20px;
+    text-align: left; }
+  .go-somewhere-pic-container .left h2 {
+    left: 20px;
+    text-decoration: none;
+    font-size: 1.75em;
+    text-align: left; }
+  .go-somewhere-pic-container .right h2 {
+    text-decoration: none;
+    font-size: 1.75em;
+    top: 50px; }
+  .go-somewhere-pic-container .playbutton-container {
+    top: 110px; }
+    .go-somewhere-pic-container .playbutton-container img {
+      width: 80px; }
+  .go-somewhere-pic-container .right p {
+    bottom: 35px; } }
+
+@media (min-width: 767px) {
+  .mobile-hero-pic {
+    display: none; }
+  .hero-container {
+    display: flex; } }
+
+@media (max-width: 700px) {
+  .mobile-menu {
+    display: flex; }
+  .hero-container {
+    display: none; } }
+
+/*////////////////////////////////*/
+/*/////////////////////////////////
+//// ABOUT PAGE
+/////////////////////////////////*/
 .about .info {
   display: flex; }
 
@@ -450,119 +575,16 @@ footer .location-icon {
   max-width: 100%; }
 
 /*/////////////////////////////////
-//// MEDIA QUERIES
+//// SOCIAL BANNER
 /////////////////////////////////*/
-@media (max-width: 1279px) {
-  .social-container {
-    background-color: #333333; } }
+.social-container {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-variant: small-caps;
+  border-bottom: 1px solid;
+  width: 95%; }
 
-@media (max-width: 900px) {
-  .go-somewhere-pic-container {
-    flex-direction: column; }
-  .go-somewhere-pic-container img {
-    width: 580px; }
-  .go-somewhere-pic-container .right h2 {
-    left: 29.5%; }
-  .go-somewhere-pic-container .left {
-    margin-bottom: 15px; }
-  .bottom-info .middle {
-    width: 61%;
-    padding-right: 0px; } }
-
-@media (max-width: 700px) {
-  .mobile-menu {
-    display: flex; }
-  header .logo-container {
-    justify-content: flex-end; }
-  header {
-    display: none; }
-  .mobile-hero-pic {
-    display: block;
-    width: 100%;
-    margin: 0 auto; }
-  .mobile-hero-pic img {
-    max-width: 560px;
-    max-width: 100%; }
-  .hero-container {
-    display: none; }
-  .go-somewhere-pic-container div {
-    margin: 0; }
-  .go-somewhere-pic-container .left {
-    margin-bottom: -3px; }
-  footer {
-    flex-direction: column-reverse; }
-  footer .left-box {
-    justify-content: center;
-    padding-left: 0%;
-    margin: 0 auto;
-    text-align: center;
-    width: 90%; }
-  footer .right-box {
-    margin: 0 auto 25px;
-    width: 70%; }
-  footer .right-box input {
-    width: 100%; }
-  footer .right-box .email-icon,
-  footer .right-box .location-icon {
-    right: 0%; }
-  .bottom-info .middle {
-    justify-content: flex-start;
-    width: 100%; }
-  .bottom-info .design {
-    display: none; } }
-
-@media (max-width: 490px) {
-  .logo-container svg {
-    width: 26px; }
-  header .logo-container h1 {
-    font-size: 1em; }
-  .go-somewhere-title h2 {
-    font-size: 1.75em; }
-  .go-somewhere-title svg {
-    width: 45px; }
-  .go-somewhere-pic-container .left p {
-    /*padding: 5px 40px 20px 20px;*/
-    font-size: 1em; }
-  .go-somewhere-pic-container .right p {
-    bottom: 6%; }
-  .go-somewhere-pic-container .right h2 {
-    left: 27.5%;
-    top: 30px; }
-  .left-box nav:nth-child(2),
-  .left-box nav:nth-child(3),
-  .left-box nav:nth-child(4) {
-    display: none; }
-  .bottom-info .middle {
-    flex-direction: column; } }
-
-@media (max-width: 375px) {
-  .go-somewhere-pic-container .left h2 {
-    padding: 10px 0 0 20px; }
-  .go-somewhere-pic-container .left p {
-    padding: 5px 40px 20px 20px;
-    font-size: 1em; }
-  .go-somewhere-pic-container button {
-    bottom: 7%; }
-  .go-somewhere-pic-container .right h2 {
-    left: 20.5%; }
-  .go-somewhere-pic-container .playbutton {
-    top: 31%;
-    left: 40%; }
-  footer .right-box {
-    margin-left: 12%; } }
-
-@media (max-width: 320px) {
-  .go-somewhere-pic-container .left p {
-    display: none; }
-  .go-somewhere-pic-container .left h2 {
-    padding: 16% 0% 0% 13%; }
-  .go-somewhere-pic-container button {
-    bottom: 37%;
-    left: 22%; }
-  .go-somewhere-pic-container .right h2 {
-    left: 15.5%; }
-  .go-somewhere-pic-container .playbutton {
-    top: 32%;
-    left: 37%; }
-  .go-somewhere-title h2 {
-    font-size: 1.5em; } }
+.social-box i {
+  margin-right: 5px; }

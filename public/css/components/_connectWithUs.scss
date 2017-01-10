@@ -1,0 +1,18 @@
+
+/*/////////////////////////////////
+//// SOCIAL BANNER
+/////////////////////////////////*/
+
+.social-container {
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-variant: small-caps;
+    border-bottom: 1px solid;
+    width: 95%;
+}
+
+.social-box i {
+    margin-right: 5px;
+}
