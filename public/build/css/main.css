@@ -586,30 +586,83 @@ footer .left-box {
 //// ABOUT PAGE
 /////////////////////////////////*/
 .about .info {
-  display: flex; }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: justify; }
 
 .about .info .left-box,
 .about .info .right-box {
-  width: 50%; }
+  width: 100%;
+  margin-bottom: 50px; }
 
-.about .info .right-box h2,
-.about .info .right-box p {
-  width: 85%;
-  margin: 20px 9%;
-  line-height: 1.2; }
+.about .right-box {
+  position: relative;
+  padding-top: 0px;
+  transition: all .2s; }
+  .about .right-box h2 {
+    font-weight: 600;
+    margin: 20px auto 0px;
+    width: 85%;
+    letter-spacing: 1px;
+    transition: all .2s; }
+  .about .right-box .subtitle {
+    margin-top: 0;
+    font-size: 1.125em;
+    letter-spacing: 4px; }
+  .about .right-box p {
+    width: 85%;
+    margin: 20px auto;
+    line-height: 1.6;
+    transition: all .2s; }
 
 .about .info button {
   display: block;
-  margin: 35px 9%; }
+  margin: 35px auto 20px;
+  min-width: 215px; }
 
 .about .right-box svg {
-  width: 145px;
+  width: 40px;
   height: auto;
   margin: 0px auto;
-  display: block; }
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 8%;
+  transition: all .2s; }
 
 .about .info img {
   max-width: 100%; }
+
+@media (min-width: 768px) {
+  .about .left-box {
+    text-align: center; } }
+
+@media (min-width: 1024px) {
+  .about .info {
+    flex-direction: row; }
+  .about .info .left-box,
+  .about .info .right-box {
+    width: 50%;
+    margin-bottom: 0px; }
+  .about .right-box p,
+  .about .right-box h2 {
+    width: 70%; }
+  .about .right-box svg {
+    right: 15%; }
+  .about .info.hide {
+    display: none; }
+  .about .info.show {
+    display: flex; }
+  .about .info button {
+    margin: 20px auto; } }
+
+@media (min-width: 1200px) {
+  .about .right-box {
+    padding-top: 50px; }
+    .about .right-box svg {
+      width: 45px;
+      top: 65px; } }
 
 /*/////////////////////////////////
 //// SOCIAL BANNER
