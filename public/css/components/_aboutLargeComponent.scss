@@ -1,0 +1,93 @@
+.about-large {
+    display: none;
+    padding-top: 10px;
+    justify-content: space-around;
+    .info {
+        width: 32%;
+        img {
+            width: 100%;
+        }
+    }
+    .left-box {
+        margin-bottom: 35px;
+    }
+    .right-box {
+        position: relative;
+        h2 {
+            font-weight: 600;
+            font-size: 1.65em;
+            line-height: 1.5em;
+            letter-spacing: 3px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 1.125em;
+        }
+        svg {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 3%;
+            top: 10px;
+        }
+    }
+}
+
+.find-travel {
+    width: 90%;
+    margin: 20px auto 90px;
+    text-align: center;
+    h2 {
+        margin-bottom: 15px;
+        // font-size: 2.25em;
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+    .input-container {
+        max-width: 380px;
+        margin: 0 auto;
+        position: relative;
+        input {
+            width: 100%;
+            padding: 18px 15px;
+            font-size: 1em;
+            text-transform: uppercase;
+            font-weight: 100;
+            border: none;
+        }
+        button {
+            width: 320px;
+            padding: 10px 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $darkgray;
+            width: 80px;
+            height: 53px;
+            border: none;
+            color: #fff;
+            border-radius: 0px;
+            i {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+@media(min-width:1024px){
+    .find-travel {
+        width: 90%;
+        margin: 100px auto 100px;
+    }
+}
+
+@media(min-width: 1400px){
+    .about-large {
+        display: flex;
+    }
+}
