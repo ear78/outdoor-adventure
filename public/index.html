@@ -17,6 +17,9 @@
 
     <body ng-controller="mainCtrl">
 
+        <!-- SIDEMENU DIRECTIVE -->
+        <side-menu-directive></side-menu-directive>
+
         <!-- MOBILE HEADER MENU 700PX LESS THAN -->
         <header class="mobile-menu">
             <div>
@@ -78,10 +81,10 @@
                 <h1>Future</h1>
             </div>
             <nav>
-                <a href="#"><li>Home</li></a>
-                <a href="about.html"><li>About</li></a>
-                <a href="contact.html"><li>Contact</li></a>
-                <a href=""><li>Book</li></a>
+                <a ui-sref="home"><li>Home</li></a>
+                <a ui-sref="about"><li>About</li></a>
+                <a ui-sref="contact"><li>Contact</li></a>
+                <a ui-sref="book"><li>Book</li></a>
                 <svg class="tree-icon" width="100%" height="100%" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
                     <g transform="matrix(1,0,0,1,-1178.5,-29.5)">
                         <g transform="matrix(1,0,0,2.0834,0,0)">
@@ -106,6 +109,9 @@
             </nav>
         </header>
 
+        <!-- SIDEMENU COMPONENT -->
+        <side-menu-component></side-menu-component>
+
     <!-- UI ANGULAR VIEW -->
     <div class="main" ui-view></div ui-view>
 
@@ -116,10 +122,10 @@
             <div class="left-box">
                 <nav >
                     <h4>Site Map</h4>
-                    <a href="#"><li>Home</li></a>
-                    <a href="about.html"><li>About</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
-                    <a href="#"><li>Shop</li></a>
+                    <a ui-sref="home"><li>Home</li></a>
+                    <a ui-sref="about"><li>About</li></a>
+                    <a ui-sref="contact"><li>Contact</li></a>
+                    <a ui-sref="book"><li>Shop</li></a>
                 </nav>
                 <nav >
                     <h4>Explore</h4>
@@ -229,6 +235,10 @@
 
     </main> <!-- closing main tag -->
 
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
     <script src="app.js"></script>
@@ -237,5 +247,6 @@
     <script src="./js/directives/heroContainerComponent.js"></script>
     <script src="./js/directives/gosomewhereComponent.js"></script>
     <script src="./js/directives/aboutLargeComponent.js"></script>
+    <script src="./js/directives/sideMenuDirective.js"></script>
     </body>
 </html>
